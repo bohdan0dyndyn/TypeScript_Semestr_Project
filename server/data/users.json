@@ -1,0 +1,16 @@
+[
+  {
+    "id": "a8d5eaf9-a834-47d0-8f45-373c9e529663",
+    "email": "test@test.com",
+    "password": "pass",
+    "displayName": "Test",
+    "createdAt": "2026-06-03T03:16:24.117Z"
+  },
+  {
+    "id": "94966ffa-f7e8-47b7-9da7-8a7444af7e39",
+    "email": "sorry@gmail.com",
+    "password": "program",
+    "displayName": "dasd",
+    "createdAt": "2026-06-03T03:31:57.542Z"
+  }
+]

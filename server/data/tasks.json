@@ -1,0 +1,13 @@
+[
+  {
+    "id": "d622d89a-5b53-4972-ac27-d1b7d66ed389",
+    "userId": "94966ffa-f7e8-47b7-9da7-8a7444af7e39",
+    "title": "Lab1",
+    "priority": "medium",
+    "deadline": "2026-06-25T20:59:59.000Z",
+    "category": "study",
+    "completed": false,
+    "createdAt": "2026-06-03T03:39:39.847Z",
+    "updatedAt": "2026-06-03T03:46:13.328Z"
+  }
+]
