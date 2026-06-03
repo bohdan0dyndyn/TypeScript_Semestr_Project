@@ -7,6 +7,9 @@ server/node_modules/
 server/dist/
 client/dist/
 
+# Старий ручний деплой (тепер — GitHub Actions)
+docs/
+
 # Environment files
 .env
 .env.local

@@ -1,12 +1,8 @@
-export class ApiError extends Error {
-  constructor(
-    message: string,
-    public readonly status: number
-  ) {
-    super(message);
-    this.name = "ApiError";
-  }
-}
+import { isStaticHosting } from "../utils/host.js";
+import { ApiError } from "./ApiError.js";
+import { localJsonRequest } from "./localJsonStorage.js";
+
+export { ApiError };
 
 export class ApiService {
   private userId: string | null = null;
@@ -44,11 +40,19 @@ export class ApiService {
     await this.request<void>("DELETE", path);
   }
 
+  private useLocalJson(): boolean {
+    return isStaticHosting() && !import.meta.env.VITE_API_URL;
+  }
+
   private async request<T>(
     method: string,
     path: string,
     body?: unknown
   ): Promise<T> {
+    if (this.useLocalJson()) {
+      return localJsonRequest<T>(method, path, body, this.userId);
+    }
+
     const headers: Record<string, string> = {
       "Content-Type": "application/json",
     };
